@@ -20,3 +20,18 @@ function getaddress(address::String)
     info = HTTP.request("GET", "https://bitcoinblockexplorers.com/api/v2/address/$address")
     return JSON.parse(String(info.body))
 end
+
+function listunspent(address::String)
+    info = HTTP.request("GET", "https://bitcoinblockexplorers.com/api/v2/utxo/$address")
+    return JSON.parse(String(info.body))
+end
+
+function getbalancehistory(address::String)
+    info = HTTP.request("GET", "https://bitcoinblockexplorers.com/api/v2/balancehistory/$address")
+    return JSON.parse(String(info.body))
+end
+
+function gettransaction(txid::String)
+    info = HTTP.request("GET", "https://bitcoinblockexplorers.com/api/v2/tx-specific/$txid")
+    return JSON.parse(String(info.body))
+end
