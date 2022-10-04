@@ -58,7 +58,7 @@ Dict{String, Any} with 17 entries:
 <h4>getaddress()</h4>
 <p>Takes an address(string) as input and returns individual data for the address</p>
 
-```
+```julia
 getaddress("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 <b>Output</b></br>
@@ -81,7 +81,7 @@ Dict{String, Any} with 11 entries:
 <h4>listunspent()</h4>
 <p>Takes an addess(string) as input and returns the UTXOs (unspent transaction outputs) belonging to that address</p>
 
-```
+```julia
 listunspent("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 <b>Output</b><br>
