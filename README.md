@@ -17,10 +17,10 @@ include("main.jl")
 
 <h3>Commands</h3>
 <h4>getblockhash()</h4>
-<p>Takes a blockheight(integer) as input and returns the block hash</p>
+<p>Takes a coin, blockheight(integer) as input and returns the block hash</p>
 
 ```julia
-getblockhash(0)
+getblockhash(BTC, 0)
 ```
 <b>Output</b><br>
 ```julia
@@ -28,10 +28,10 @@ getblockhash(0)
 ```
 
 <h4>getblock()</h4>
-<p>Takes a NON-ZERO blockheight(integer) as input and returns block data</p>
+<p>Takes a coin, NON-ZERO blockheight(integer) as input and returns block data</p>
 
 ```julia
-getblock(1)
+getblock(BTC, 1)
 ```
 <b>Output</b><br>
 ```julia
@@ -56,10 +56,10 @@ Dict{String, Any} with 17 entries:
 ```
 
 <h4>getaddress()</h4>
-<p>Takes an address(string) as input and returns individual data for the address</p>
+<p>Takes a coin, an address(string) as input and returns individual data for the address</p>
 
 ```julia
-getaddress("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
+getaddress(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 <b>Output</b></br>
 
@@ -79,10 +79,10 @@ Dict{String, Any} with 11 entries:
 ```
 
 <h4>listunspent()</h4>
-<p>Takes an addess(string) as input and returns the UTXOs (unspent transaction outputs) belonging to that address</p>
+<p>Takes a coin, an addess(string) as input and returns the UTXOs (unspent transaction outputs) belonging to that address</p>
 
 ```julia
-listunspent("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
+listunspent(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 <b>Output</b><br>
 
@@ -110,10 +110,10 @@ listunspent("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
  Dict{String, Any}("height" => 1, "vout" => 0, "txid" => "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098", "confirmations" => 756793, "scriptPubKey" => "410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac", "value" => "5000000000")
 ```
 <h4>getbalancehistory()</h4>
-<p>Takes an address(string) as input and returns transaction history</p>
+<p>Takes a coin, an address(string) as input and returns transaction history</p>
 
 ```julia
-getbalancehistory("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
+getbalancehistory(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 
 <b>Output</b><br>
@@ -142,10 +142,10 @@ getbalancehistory("12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
  Dict{String, Any}("sentToSelf" => "0", "sent" => "0", "time" => 1664121600, "received" => "7235", "txs" => 1)
 ```
 <h4>gettransaction()</h4>
-<p>Takes a transaction hash(string) as input and returns transaction data</p>
+<p>Takes a coin, a transaction hash(string) as input and returns transaction data</p>
 
 ```julia
-gettransaction("0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098")
+gettransaction(BTC, "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098")
 ```
 
 <b>Output</b><br>
