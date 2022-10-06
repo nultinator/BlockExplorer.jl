@@ -1,5 +1,9 @@
+println("TESTING")
 @assert 1 == 1
 println("1 = 1: passed")
+################### BTC Tests #####################
+println("---------------- BTC Tests--------------------")
+
 
 @assert getblockhash(BTC, 0) == "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
 println("Blockhash 0: passed")
@@ -18,3 +22,24 @@ println("Satoshi's Transaction History: passed")
 
 @assert gettransaction(BTC, "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098")["blockhash"] == "00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048"
 println("Block 1 Transaction: passed")
+#################### YEC Tests ######################
+println("---------------YEC Tests-----------------------")
+
+
+@assert getblockhash(YEC, 570000) == "0000014fbc5917ba8bcacf3336faf588d86b32443aa3a490a587af5750c77ec5"
+println("Hash of Fork Block: passed")
+
+@assert getblock(YEC, 570000)["nonce"] == getblock(YEC, "0000014fbc5917ba8bcacf3336faf588d86b32443aa3a490a587af5750c77ec5")["nonce"]
+println("getblock(int) == getblock(hash): passed")
+
+@assert getaddress(YEC, "s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL")["address"] == "s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL"
+println("getaddress s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL == s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL: passed")
+
+@assert listunspent(YEC, "s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL")[end]["txid"] == "80f12311e8a74f6ef52e7adcdfa479cf5db80179b97c5a70fe414fe763f52b1b"
+println("s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL oldest txid == 80f12311e8a74f6ef52e7adcdfa479cf5db80179b97c5a70fe414fe763f52b1b: passed")
+
+@assert getbalancehistory(YEC, "s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL") != 0
+println("s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL Transaction History: passed")
+
+@assert gettransaction(YEC, "617662aee4694b0a1832b1cc818c00f88a8e33d125345dee42e9c3f20677a77b")["blockhash"] == "0000014fbc5917ba8bcacf3336faf588d86b32443aa3a490a587af5750c77ec5"
+println("Fork transaction: passed")
