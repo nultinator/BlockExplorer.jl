@@ -1,23 +1,22 @@
+"""
+
+"""
 struct Coin
     url::String
 end
 
-#Bitcoin
-BTC = Coin(
+const BTC = Coin(
     "bitcoinblockexplorers.com"
 )
 
-#Bitcoin Cash
-BCH = Coin(
+const BCH = Coin(
     "bchblockexplorer.com"
 )
 
-#Litecoin
-LTC = Coin(
+const LTC = Coin(
     "litecoinblockexplorer.net"
 )
 
-#Ycash
-YEC = Coin(
+const YEC = Coin(
     "yecblockexplorer.com"
 )
