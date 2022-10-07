@@ -1,18 +1,9 @@
-# juliaBlockExplorer
+# BlockExplorer
 make blockbook api calls from julia
 
-<h3>Setup</h3>
-
-```shell
-git clone https://github.com/nultinator/juliaBlockExplorer
-```
-
-<h3>To use</h3>
-
-```shell
-cd path/to/juliaBlockexplorer
-./julia
-include("main.jl")
+### setup
+```julia
+using Pkg; Pkg.add(url = "https://emmettgb/BlockExplorer.jl")
 ```
 
 <h3>Commands</h3>
