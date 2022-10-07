@@ -97,7 +97,7 @@ print(listunspent(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"))
 function listunspent(coin::Coin, address::String)
     info::HTTP.Response = HTTP.request("GET",
      "https://$(coin.url)/api/v2/utxo/$address")
-    JSON.parse(String(info.body))::AbstractDict
+    JSON.parse(String(info.body))::Vector{Any}
 end
 
 """
@@ -119,7 +119,7 @@ print(getbalancehistory(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX"))
 function getbalance_history(coin::Coin, address::String)
     info::HTTP.Response = HTTP.request("GET",
      "https://$(coin.url)/api/v2/balancehistory/$address")
-    JSON.parse(String(info.body))::AbstractDict
+    JSON.parse(String(info.body))::Vector{Any}
 end
 
 """
