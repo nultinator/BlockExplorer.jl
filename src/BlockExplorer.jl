@@ -2,7 +2,11 @@ module BlockExplorer
 using HTTP
 using JSON
 
-include("explorer.jl")
-include("tests.jl")
+include("API.jl")
 
+# coins
+export Coin, BTC, BCH, LTC, YEC
+# api
+export getblock_hash, getblock, getaddress, listunspent, getbalance_history
+export gettransaction
 end # module
