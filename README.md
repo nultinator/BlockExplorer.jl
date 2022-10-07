@@ -1,17 +1,15 @@
 # BlockExplorer
-make blockbook api calls from julia
-
-### setup
+Make blockbook api calls from julia.
 ```julia
 using Pkg; Pkg.add(url = "https://emmettgb/BlockExplorer.jl")
 ```
 
 <h3>Commands</h3>
-<h4>getblockhash()</h4>
+<h4>getblock_hash()</h4>
 <p>Takes a coin, blockheight(integer) as input and returns the block hash</p>
 
 ```julia
-getblockhash(BTC, 0)
+getblock_hash(BTC, 0)
 ```
 <b>Output</b><br>
 ```julia
@@ -100,11 +98,11 @@ listunspent(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
  Dict{String, Any}("height" => 127659, "vout" => 1, "txid" => "d6be34ccf6edddc3cf69842dce99fe503bf632ba2c2adb0f95c63f6706ae0c52", "confirmations" => 629135, "scriptPubKey" => "76a914119b098e2e980a229e139a9ed01a469e518e6f2688ac", "value" => "2000000")
  Dict{String, Any}("height" => 1, "vout" => 0, "txid" => "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098", "confirmations" => 756793, "scriptPubKey" => "410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac", "value" => "5000000000")
 ```
-<h4>getbalancehistory()</h4>
+<h4>getbalance_history()</h4>
 <p>Takes a coin, an address(string) as input and returns transaction history</p>
 
 ```julia
-getbalancehistory(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
+getbalance_history(BTC, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX")
 ```
 
 <b>Output</b><br>
