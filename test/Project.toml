@@ -1,0 +1,7 @@
+name = "test"
+uuid = "d010485f-bbb0-4f03-9e42-6ca8066b6f9b"
+authors = ["emmac <emmettgb@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+BlockExplorer = "226b4d4a-a984-488c-a10c-5334946291f6"
