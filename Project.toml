@@ -1,6 +1,6 @@
 name = "BlockExplorer"
 uuid = "226b4d4a-a984-488c-a10c-5334946291f6"
-authors = ["nultinator <https://twitter.com/JacobNulty>", "emmac <emmettgb@gmail.com>"]
+authors = ["nultinator <nulinator@yahoo.com>", "emmac <emmettgb@gmail.com>"]
 version = "0.1.0"
 
 [deps]
