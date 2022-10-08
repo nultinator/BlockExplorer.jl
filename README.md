@@ -1,7 +1,7 @@
 # BlockExplorer
 Make blockbook api calls from julia.
 ```julia
-using Pkg; Pkg.add(url = "https://emmettgb/BlockExplorer.jl")
+using Pkg; Pkg.add(url = "https://github.com/nultinator/BlockExplorer.jl")
 ```
 
 <h3>Commands</h3>
