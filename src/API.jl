@@ -11,6 +11,12 @@ println(getblock_hash(BTC, 0))
 "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
 ```
 """
+function getblockcount(coin::Coin)
+    info::HTTP.Response = HTTP.request("GET", "https://$(coin.url)/api")
+    return JSON.parse(String(info.body))["backend"]["blocks"]::Int64
+end
+
+
 function getblock_hash(coin::Coin, block::Int64)
     info::HTTP.Response = HTTP.request("GET",
     "https://$(coin.url)/api/v2/block-index/$block")
