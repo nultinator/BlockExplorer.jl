@@ -5,6 +5,18 @@ using Pkg; Pkg.add(url = "https://github.com/nultinator/BlockExplorer.jl")
 ```
 
 <h3>Commands</h3>
+<h4>getblockcount()</h4>
+<p>Takes a coin as input and returns the height of that coin's blockchain</p>
+
+```julia
+getblockcount(BTC)
+```
+
+<b>Output</b><br>
+
+```julia
+757943
+```
 <h4>getblock_hash()</h4>
 <p>Takes a coin, blockheight(integer) as input and returns the block hash</p>
 
