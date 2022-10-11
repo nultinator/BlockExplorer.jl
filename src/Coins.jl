@@ -35,3 +35,7 @@ const LTC = Coin(
 const YEC = Coin(
     "yecblockexplorer.com"
 )
+
+const ZEC = Coin(
+    "zecblockexplorer.com"
+)
