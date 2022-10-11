@@ -37,4 +37,11 @@ end
     @test getbalance_history(YEC, "s2xbtsG1JXb4pu3H2ZuhuL8UTFvtmSizYRL") != 0
     @test gettransaction(YEC, "617662aee4694b0a1832b1cc818c00f88a8e33d125345dee42e9c3f20677a77b")["blockhash"] == "0000014fbc5917ba8bcacf3336faf588d86b32443aa3a490a587af5750c77ec5"
 end
+
+################# ZEC Tests #########################
+@testset "ZEC Tests" begin
+    @test typeof(getblockcount(ZEC)) == Int64
+    @test getblock(ZEC, 1)["nonce"] == getblock(ZEC, "0007bc227e1c57a4a70e237cad00e7b7ce565155ab49166bc57397a26d339283")["nonce"]
+    @test getbalance_history(ZEC, "t3XyYW8yBFRuMnfvm5KLGFbEVz25kckZXym") !=0
+    @test gettransaction(ZEC, "c27cea0f91b2e20160c41157d67a57ed474c7d71a953e166384e522d707ba273")["blockHash"] == "000000000014c22d5175a1e9795b8bf05aa4f914986666a5bc1b3a2a0d23948b"
 end # module
