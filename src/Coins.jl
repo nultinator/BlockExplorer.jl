@@ -28,6 +28,10 @@ const BCH = Coin(
     "bchblockexplorer.com"
 )
 
+const KMD = Coin(
+    "komodoblockexplorer.com"
+)
+
 const LTC = Coin(
     "litecoinblockexplorer.net"
 )

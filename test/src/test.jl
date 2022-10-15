@@ -20,6 +20,12 @@ end
     @test getbalance_history(BCH, "12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX") != 0
     @test gettransaction(BCH, "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098")["blockhash"] == "00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf18eb6048"
 end
+################### KMD Tests ######################
+@testset "KMD Tests" begin
+    @test getblock_hash(KMD, 0) == "027e3758c3a65b12aa1046462b486d0a63bfa1beae327897f56c5cfb7daaae71"
+    @test getblock(KMD, 1)["nonce"] == getblock(KMD, "0a47c1323f393650f7221c217d19d149d002d35444f47fde61be2dd90fbde8e6")["nonce"]
+    @test gettransaction(KMD, "e1c2725b908a8afb615efe7ea254d23f581704009bc9b7ec21c9612e90f9187c")["height"] == 3121019
+    @test getbalance_history(KMD, "RKtrYT7yN2ZgV8wqEj5c2EoZPMtB1gdjDR") != 0
 ################### LTC Tests ######################
 @testset "LTC Tests" begin
     @test getblock_hash(LTC, 0) == "12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"
