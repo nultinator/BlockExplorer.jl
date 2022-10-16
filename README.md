@@ -168,3 +168,13 @@ Dict{String, Any} with 14 entries:
   "txid"          => "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1ef…
   "blockhash"     => "00000000839a8e6886ab5951d76f411475428afc90947ee320161bbf1…
 ```
+
+<h2>Supported Coins</h2>
+<ul>
+  <li>Bitcoin</li>
+  <li>Bitcoin Cash</li>
+  <li>Komodo</li>
+  <li>Litecoin</li>
+  <li>Ycash</li>
+  <li>Zcash</li>
+</ul>
